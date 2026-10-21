@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Rock_Paper_Scissors
+    </title>
+    <style>
+      body{font-size: 35px;}
+      p{color: deeppink;padding-left:190px;}
+      button{background-color: black;font-size:26px;margin:15px;padding: 11px 15px;}
+      .button-1{color: coral;margin-left:410px;}
+      .button-2{color: cornsilk;}
+      .button-3{color: aqua;}
+    </style>
+  </head>
+  <body style="background-color: rgb(69, 31, 79);">
+    <script>
+      alert("بازی سنگ کاغذ قیچی")
+      let computerMove="";
+      let result="";
+    </script>
+    <p>
+     Hi! This is a Rock Paper Scissors game . Choose one to start :)
+     <!-- سلام ! این بازی سنگ کاغذ قیچی است . یکی را برای شروع انتخاب کن : -->
+    </p>
+    <button title="سنگ" class="button-1" onclick="
+      let randomNumber=Math.random();
+      if (randomNumber>=0 && randomNumber<1/3){
+      computerMove='rock';}
+      else if(randomNumber>=1/3 && randomNumber<2/3){
+      computerMove='paper';}
+      else if(randomNumber>=2/3){
+      computerMove='scissors';}
+      if (computerMove==='rock'){
+      result='drew';}
+      else if (computerMove==='paper'){
+      result='you lost';}
+      else if (computerMove==='scissors'){
+      result='you won';}
+      /* <alert=('تو سنگ انتخاب کردی . کامپیوتر ${computerMove} انتخاب کرد . ${result}'); */
+      alert(`you picked rock . computer picked ${computerMove} . ${result}.`);
+    ">
+     Rock  <!--سنگ -->
+    </button>
+    <button title="کاغذ" class="button-2" onclick="
+      let randomNumber=Math.random();
+      if (randomNumber>=0 && randomNumber<1/3){
+      computerMove='rock';}
+      else if(randomNumber>=1/3 && randomNumber<2/3){
+      computerMove='paper';}
+      else if(randomNumber>=2/3){
+      computerMove='scissors';}
+      if (computerMove==='rock')
+      result='you won';
+      else if (computerMove==='paper')
+      result='drew';
+      else if (computerMove==='scissors')
+      result='you lost';
+    alert(`you picked paper . computer picked ${computerMove} . ${result}.`);
+    ">
+    Paper  <!--کاغذ -->
+    </button>
+    <button title="قیچی" class="button-3" onclick="
+      let randomNumber=Math.random();
+      if (randomNumber>=0 && randomNumber<1/3)
+      computerMove='rock';
+      else if(randomNumber>=1/3 && randomNumber<2/3)
+      computerMove='paper';
+      else if(randomNumber>=2/3){
+      computerMove='scissors';}
+      if (computerMove==='rock')
+      result='you lost';
+      else if (computerMove==='paper')
+      result='you won';
+      else if (computerMove==='scissors')
+      result='drew';
+      alert(`you picked scissors . computer picked ${computerMove} . ${result}.`);
+    ">
+     Scissors <!-- قیچی -->
+    </button>
+  </body>
+</html>
